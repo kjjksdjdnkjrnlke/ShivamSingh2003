@@ -1,5 +1,85 @@
-.h1{
-    height: 20px;
-    width: 10%;
-    
+*{
+    margin: --0;
+    padding: --0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    min-height: 100vh;
+}
+.calculator{
+    position: relative;
+    width: 330px;
+    box-shadow: inset 0 6px 1px 0 rgba(0, 0, 0, 0.35),
+    0 0 5px rgba(0,0,0,0.5),
+    0 15px 25px rgba(0, 0, 0, 0.35);
+   
+}
+.calculator .buttons{
+    position: relative;
+    display: grid;
+}
+.calculator .buttons #value{
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 30px;
+    border-radius: 10px;
+    background: rgb(163, 163, 124);
+    text-align: right;
+    font-size: 1.6rem;
+    color: #3c3a2e;
+    overflow: hidden;
+    box-shadow: inset 0 6px 1px 0 rgba(0, 0, 0, 0.35),
+    0 0 5px rgba(0,0,0,0.5),
+    0 15px 25px rgba(0, 0, 0, 0.35);
+}
+.calculator .buttons span{
+    position: relative;
+    padding: 10px;
+    margin: 6px;
+    min-width: 40px;
+    font-size: 1.3rem;
+    font-style: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    border: 2px solid #222;
+    border-radius: 10px;
+    background: linear-gradient(#555353,#363535);
+    box-shadow: inset 0 6px 1px 0 rgba(0, 0, 0, 0.35),
+    0 0 5px rgba(0,0,0,0.5),
+    0 15px 25px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    user-select: none;
+}
+.calculator .buttons span::before{
+    content: '';
+    position: absolute;
+    inset: 5px 3px;
+    border: top 1px solid #ccc;
+    filter: blur(2px);
+}
+.calculator .buttons span:active{
+     box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.35),
+     inset 0 5px 15px rgba(0,0,0,0.5),0 15px 25px rgba(0, 0, 0, 0.35);
+     color: #fff;
+     text-shadow: 0 0 5px #219cf3, 0 0 8px #219cf3;
+
+}
+.calculator .buttons span#clear{
+    grid-column: span 2;
+    background:#ce5148;
+    color: #fff;
+}
+.calculator .buttons span#plus{
+    grid-row: span 2;
+    background: #3bc43f;
+    color: #fff;
 }
